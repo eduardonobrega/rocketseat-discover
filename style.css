@@ -272,17 +272,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@keyframes slide-in-fwd-center {
-  0% {
-    transform: translateZ(-1400px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateZ(0);
-    opacity: 0.8;
-  }
-}
-
 @media (max-width: 750px) {
   section {
     columns: 1;
