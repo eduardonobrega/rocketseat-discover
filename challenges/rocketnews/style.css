@@ -14,28 +14,29 @@ body, input, button {
   font-size: 1.4rem;
 }
 
-
 body {
-  min-height: 100vh;
   color: #fff;
   font-family: 'League Spartan', sans-serif;
-  background-color: red;
+  background: url('assets/read_news.jpg') top center no-repeat;
+  background-size: cover;
+}
+
+main, header, #app { 
+  max-width: 72rem;
+  background-color: #121214;
+}
+
+main, header{
+  padding: 0 5%;
 }
 
 #app {
-  background-color: yellow;
-  min-height: 100vh;
-}
-
-main, header {
-  padding: 0 5%;
   background-color: #121214;
-  max-width: 72rem;
 }
 
 header {
   padding-top: 3rem;
-  padding-bottom: 5rem;
+  height: 25vh;
 }
 
 header img {
@@ -43,10 +44,11 @@ header img {
 }
 
 main {
+  padding-top: clamp(0rem, -4.0000rem + 12.5000vw, 5rem);
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  
+  height: 75vh;
 }
 
 main h1, main input {
@@ -87,7 +89,11 @@ form div {
   filter: drop-shadow(4px 10px 15px rgba(0, 0, 0, 0.5));
   background-color: #08C05E;
   padding-left: .5rem;
+  width: min(88vw, 79.8rem);
 }
+
+
+
 form input, form button {
   border: none;
 }
