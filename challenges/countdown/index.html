@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Countdown</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./src/index.js" defer></script>
+    <title>Countdown</title>
+  </head>
+  <body>
+    <main>
+      <h1>Ready to launch in...</h1>
+
+      <div id="countdown">
+        <div class="wrapper-timer">
+          <span class="timer-txt">Dias</span>
+          <span span id="days">08</span>
+        </div>
+        :
+        <div class="wrapper-timer">
+          <span class="timer-txt">Horas</span>
+          <span id="hours">12</span>
+        </div>
+        :
+        <div class="wrapper-timer">
+          <span class="timer-txt">Minutos</span>
+          <span id="minutes">44</span>
+        </div>
+        :
+        <div class="wrapper-timer">
+          <span class="timer-txt">Segundos</span>
+          <span id="seconds">28</span>
+        </div>
+      </div>
+
+      <p>Inscreva-se para saber mais sobre o lançamento</p>
+
+      <button>Inscreva-se</button>
+    </main>
+
+    <img src="assets/rocket.svg" alt="">
+  </body>
 </html>
