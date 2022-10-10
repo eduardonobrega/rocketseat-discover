@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --font: 'Poppins', sans-serif;
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font);
+
+  min-height: 100vh;
+
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  
+}
+
+main {
+  display: flex;
+  justify-content: start;
+  gap: 1.8rem;
+}
+
+main h1 {
+  padding-top: 1.8rem;
+  
+  font-size: clamp(2rem, 1.6429rem + 1.0204vw, 2.5rem);
+  font-weight: 500;
+  line-height: 3.8rem;
+}
+
+aside {
+  background-color: var(--green);
+
+  width: 25rem;
+  height: 100vh;
+  
+  font-size: clamp(1.2rem, -2.0000rem + 10.0000vw, 1.5rem);
+  font-weight: 400;
+  line-height: 2.2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  align-items: flex-start;
+
+}
+
+aside img {
+  cursor: pointer;
+}
+
+aside >  div:first-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 1.4rem 0 2.9rem;
+}
+
+aside nav {
+  margin-top: 2.6rem;
+  padding: 0 1.4rem;
+
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+
+  padding: 1.3rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: background-color .3S ;
+}
+
+aside nav ul li:hover {
+  background-color: var(--light-green);
+}
+
+aside nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#userArea {
+  background-color: var(--light-green); 
+  line-height: 1.3rem;
+  
+  padding: .8rem 1.4rem;
+
+  align-self: end;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+#user {
+ display: flex;
+ align-items: center;
+ gap: .9rem; 
+
+}
+
+#userAvatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.2rem;
+}
+
+
+#userPosition {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
