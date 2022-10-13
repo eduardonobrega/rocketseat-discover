@@ -186,16 +186,22 @@ main {
 
 section {
   padding: 3rem;
-  columns: 2;
-  column-gap: 2rem;
+  /* columns: 2;
+  column-gap: 2rem; */
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3%;
+  justify-content: space-between;
+
 }
 
 .wrapper-project {
+  width: 48%;
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
   transition: transform 0.3s;
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
 }
 
 .wrapper-project:hover {
@@ -273,12 +279,13 @@ footer a:hover {
 }
 
 @media (max-width: 750px) {
-  section {
-    columns: 1;
+  .wrapper-project {
+    width: 100%;
   }
 }
 
 @media (max-width: 552px) {
+  
   #app {
     grid-template-columns: auto;
     column-gap: 0;
