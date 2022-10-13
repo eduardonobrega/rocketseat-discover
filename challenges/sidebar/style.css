@@ -44,6 +44,7 @@ main h1 {
 
 aside {
   background-color: var(--green);
+  
 
   width: 25rem;
   height: 100vh;
@@ -130,4 +131,29 @@ aside nav a {
 #userPosition {
   font-size: 1.2rem;
   line-height: 1.8rem;
+}
+
+.closed {
+  display: none !important;
+}
+
+
+
+
+@keyframes menu {
+  0% {
+    width: 25rem;
+  }
+  100% {
+    width: 7.8rem;
+  }
+}
+
+@keyframes menuShow {
+  0% {
+    width: 7.8rem;
+  }
+  100% {
+    width: 25rem;
+  }
 }
