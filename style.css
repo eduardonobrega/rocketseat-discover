@@ -192,7 +192,6 @@ section {
   flex-wrap: wrap;
   column-gap: 3%;
   justify-content: space-between;
-
 }
 
 .wrapper-project {
@@ -233,6 +232,27 @@ section {
 .wrapper-project:hover .buttons {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.781);
+}
+
+ul.techs {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  list-style: none;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.techs li {
+  background-color: #886ce4b9;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  font-size: 1.2rem;
 }
 
 .buttons a {
@@ -285,7 +305,6 @@ footer a:hover {
 }
 
 @media (max-width: 552px) {
-  
   #app {
     grid-template-columns: auto;
     column-gap: 0;
