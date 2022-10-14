@@ -28,13 +28,47 @@ body {
   background-color: var(--page-background);
 }
 
-main {
-  width: min(90%, 110.5rem);
-  margin: auto;
+body::before {
+  content: '';
+  height: 50vh;
+  width: 100%;
+
+  background-color: var(--blue);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
-h1 {
+main > h1,
+main > p {
+  color: #fff;
+  text-align: center;
+}
+
+main h1 {
   font-size: clamp(2.5rem, 1.8429rem + 2.0536vw, 4.8rem);
+
+  margin-top: 10vh;
+  margin-bottom: 2rem;
+
+  font-weight: 700;
+  line-height: 6.5rem;
+}
+
+main > p {
+  font-weight: 400;
+  font-size: clamp(1.3rem, 1.1571rem + 0.4464vw, 1.8rem);
+  line-height: 2.5rem;
+
+  max-width: 55.3rem;
+  margin-inline: auto;
+  margin-bottom: 6.5rem;
+}
+
+main {
+  width: min(95%, 110.5rem);
+  margin: auto;
 }
 
 .wrapper-card {
@@ -42,9 +76,12 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+
+  margin-bottom: 10rem;
 }
 
 .card {
+  overflow: hidden;
   background-color: #fff;
   color: var(--gray);
 
@@ -53,12 +90,11 @@ h1 {
 
   box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
   border-radius: 0.8rem;
-  height: 47rem;  
+  height: 47rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
 }
 
 .card h2 {
@@ -97,7 +133,7 @@ h1 {
 }
 
 hr {
-  border-top: .5px solid #eee;
+  border-top: 0.5px solid #eee;
   border-bottom: none;
   margin-block: 2rem;
 }
@@ -105,14 +141,14 @@ hr {
 .card ul {
   display: flex;
   flex-direction: column;
-  gap:  clamp(1rem, 0.7143rem + 0.8929vw, 2rem);
+  gap: clamp(1rem, 0.7143rem + 0.8929vw, 2rem);
 }
 
 .card ul li {
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.9rem;
-  
+
   display: inline-flex;
   gap: 1.5rem;
 }
@@ -132,7 +168,7 @@ hr {
   border-radius: 1rem;
   padding: 1.2rem 0;
 
-  transition: color, background-color .3s;
+  transition: color, background-color 0.3s;
 
   cursor: pointer;
 }
@@ -142,6 +178,11 @@ hr {
   background-color: var(--blue);
 }
 
+.card-special {
+  margin-top: -.8rem;
+  height: 49rem;
+}
+
 .card-special button {
   color: #fff;
   background-color: var(--blue);
@@ -149,4 +190,38 @@ hr {
 
 .card-special button:hover {
   filter: brightness(1.1);
+}
+
+.card-special div > div {
+  background-color: var(--yellow);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -3rem -3rem 1rem -3rem;
+  padding: 2.2rem 3rem;
+}
+
+.card-special div > div h2 {
+  color: var(--blue);
+  margin-bottom: 0;
+}
+
+.card-special div > div span {
+  background-color: var(--blue);
+  color: #fff;
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  padding: .8rem 2.4rem;
+  border-radius: 4rem;
+}
+
+
+@media (max-width: 1180px) {
+  .card-special {
+    margin-top: 0;
+  }
 }
