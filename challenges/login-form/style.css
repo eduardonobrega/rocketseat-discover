@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* 
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+*/
+
+:root {
+  font-size: 62.5%;
+
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* https://developer.mozilla.org/pt-BR/docs/Web/CSS/:focus-within */
