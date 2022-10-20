@@ -22,8 +22,16 @@
   box-sizing: border-box;
 }
 
+body, input, label, button {
+  font-size: 1.6rem;
+}
+
 body {
   min-height: 100vh;
+  background-color: var(--background);
 }
+
+
+
 
 /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/:focus-within */
