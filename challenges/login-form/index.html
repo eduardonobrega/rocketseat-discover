@@ -8,39 +8,39 @@
     <title>Login Form</title>
   </head>
   <body>
-    <header><img src="images/logo.svg" alt="logo camp.in" /></header>
-
-    <main>
-      <form onsubmit="handle(event)">
-        <div id="header-form">
-          <h1>
-            <img src="images/log-in.svg" alt="image log-in" /> Faça seu login
-          </h1>
-          <p>Entre com suas informações de cadastro.</p>
-        </div>
-
-        <label for="email"
-          >E-mail
-          <input type="email" id="email" placeholder="Digite seu e-mail"/>
-        </label>
-        <label for="password"
-          >Senha
-          <input type="password" id="password" placeholder="Digite sua senha" />
-        </label>
-
-        <div>
-          <div class="checkbox-wrapper">
-            <input type="checkbox" id="remember" />
-            <label for="remember">Lembre-me</label>
+    <div>
+      <header><img src="images/logo.svg" alt="logo camp.in" /></header>
+      <main>
+        <form onsubmit="handle(event)">
+          <div id="header-form">
+            <h1>
+              <img src="images/log-in.svg" alt="image log-in" /> Faça seu login
+            </h1>
+            <p>Entre com suas informações de cadastro.</p>
           </div>
-          
-          <a href="#"><strong>Esqueci minha senha</strong></a>
-        </div>
+          <label for="email"
+            >E-mail
+            <input type="email" id="email" placeholder="Digite seu e-mail"/>
+          </label>
+          <label for="password"
+            >Senha
+            <input type="password" id="password" placeholder="Digite sua senha" />
+          </label>
+          <div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Lembre-me</label>
+            </div>
+      
+            <a href="#"><strong>Esqueci minha senha</strong></a>
+          </div>
+          <button>Entrar</button>
+          <a href="#">Não tem uma conta? <strong>Registre-se</strong></a>
+        </form>
+      </main>
+    </div>
 
-        <button>Entrar</button>
-        <a href="#">Não tem uma conta? <strong>Registre-se</strong></a>
-      </form>
-    </main>
+    <img src="images/side-image-2x.jpg" alt="">
 
     <script>
       function handle(e) {
