@@ -44,11 +44,10 @@ body {
   background-color: var(--background);
   
   display: flex;
+  justify-content: center;
 }
 
-body > img {
-  display: none;
-}
+
 
 header {
   padding-block: 4rem 3rem;
@@ -220,28 +219,30 @@ form input[type='password']:focus {
 }
 
 @media (min-width: 40em) {
-  main {
-    background-color: var(--form-background);
-    /* width: 57.2rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
-    padding-block: 5vh;
-    margin-inline: auto;
-  }
-  body {
-    background-color: #868686;
-  }
-
   body > div {
+    position: relative;
     width: max(50vw, 40em); 
     height: 100vh;
     flex-shrink: 0;
-    background-color: red;
+  }
+  main {
+    background-color: var(--form-background);
+    width: 57.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-block: 5vh;
+    margin-inline: auto;
   }
 
-  body > img {
-    display: block;
+ 
+
+  section {
     width: 50%;
+    height: 100vh;
+    background: black url('./images/side-image.jpg') no-repeat center center;
+    background-size: cover;
   }
+
 }
