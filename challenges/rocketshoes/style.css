@@ -1,0 +1,167 @@
+:root {
+  --button: #ff0000;
+  --main-background: #c4c4c4;
+  --background: #e5e5e5;
+  --text: #000;
+  --footer: #000;
+  --text-description: #9c9696;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text);
+}
+
+header {
+  background-color: transparent;
+
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: var(--main-background);
+}
+
+header img {
+  cursor: pointer;
+}
+
+header > img {
+  display: none;
+}
+
+header > div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+header > ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > ul a {
+  color: var(--text);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.1143rem + 0.8929vw, 2.4rem);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header > ul a:hover {
+  text-decoration: underline;
+}
+
+header label {
+  background-color: white;
+
+  width: 22rem;
+  height: 4.5rem;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 0 1rem;
+}
+
+header label input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+}
+
+section#text {
+  max-width: 35.7rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section#text h1 {
+  font-weight: 700;
+  font-size: clamp(3rem, 0.6rem + 3.75vw, 6rem);
+  margin: 2rem 0;
+}
+
+section#text > p {
+  color: var(--text-description);
+  font-weight: 700;
+  line-height: 1.9rem;
+
+}
+
+section#text > span {
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  font-size: clamp(2rem, 0.4rem + 2.5vw, 4rem);
+  line-height: 4.7rem;
+
+  margin: 2.1rem 0 3rem 0;
+}
+
+section#text button {
+  color: #fff;
+  background-color: var(--button);
+
+
+  border: none;
+  font-weight: 700;
+  line-height: 0;
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 1.1143rem + 0.8929vw, 2.4rem);
+
+  width: clamp(13.7rem, 9.6886rem + 12.5357vw, 27.74rem);
+  height: clamp(4.5rem, 3.2143rem + 4.0179vw, 9rem);
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  header > img {
+    display: inline;
+  }
+  header div > img:last-child {
+    display: none;
+  }
+
+  header {
+    height: fit-content;
+    background-color: white;
+    flex-direction: row;
+    gap: clamp(1rem, -4.92rem + 9.25vw, 8.4rem);
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 4rem;
+  }
+
+  header ul {
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+}
