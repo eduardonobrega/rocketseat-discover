@@ -20,6 +20,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--text);
+  background-color: var(--background);
 }
 
 header {
@@ -146,7 +147,7 @@ section#images > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.7rem;
+  gap: 3rem;
 
   padding: 2rem;
   margin-top: 3em;
@@ -154,7 +155,7 @@ section#images > div {
 
 section#images > div img {
   transition: transform 0.3s;
-  max-width: 27rem;
+  max-width: 25em;
 }
 
 section#images > div img:hover {
@@ -171,7 +172,6 @@ footer {
 
   align-items: center;
 }
-
 
 footer > ul {
   list-style: none;
@@ -193,14 +193,17 @@ footer > ul a:hover {
 }
 
 footer > button {
+  background-color: #000;
+  color: #fff;
+
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.1143rem + 0.8929vw, 2.4rem);
+
   border: none;
   width: 100%;
   max-width: 43.7rem;
-  background-color: #000;
-  color: #fff;
-  font-weight: 700;
-  font-size: clamp(1.4rem, 1.1143rem + 0.8929vw, 2.4rem);
   padding: 2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 40em) {
@@ -213,18 +216,93 @@ footer > button {
 
   header {
     height: fit-content;
-    background-color: white;
+    background-color: transparent;
     flex-direction: row;
     gap: clamp(1rem, -4.92rem + 9.25vw, 8.4rem);
     width: 95%;
     margin: 0 auto;
     padding-top: 4rem;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   header ul {
     flex-direction: row;
     flex: 1;
     justify-content: space-evenly;
+  }
+
+  main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 37vw auto;
+  }
+
+  main > #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+
+    padding-left: 2rem;
+  }
+
+  main > #images {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 1rem 1rem;
+    background: var(--main-background)url(./assets/tenis-1-ampliado.png) no-repeat center center;
+  }
+
+  main > #images > div {
+    display: flex;
+    flex-flow: row wrap;
+
     gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  main > #images img {
+    width: 30%;
+    cursor: pointer;
+  }
+
+  main > #images img:nth-child(2) {
+    border-bottom: 5px solid red;
+  }
+
+  footer {
+    height: 16.6rem;
+    flex-direction: row;
+    gap: 0;
+
+    padding: 0;
+    margin: 0;
+  }
+  footer iframe {
+    height: 100%;
+    background-color: var(--main-background);
+  }
+
+  footer img {
+    width: 20%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  footer > ul {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    flex: 1;
+    padding: 0 1rem;
+  }
+
+  footer > button {
+    height: 100%;
   }
 }
