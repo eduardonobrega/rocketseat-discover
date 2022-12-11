@@ -1,0 +1,118 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  --background: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --text-menu-mobile: #a8a8b3;
+  --hover-color-menu-mobile: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: #000;
+
+  background-image: url('../assets/blur-1.png'), url('../assets/blur-2.png');
+  background-repeat: no-repeat no-repeat;
+  background-position: left bottom, right top;
+
+}
+
+header {
+  max-width: min(95%, 91.8rem);
+  margin: 0 auto;
+  padding-top: 6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+
+  gap: clamp(1rem, -4.0647rem + 7.9137vw, 3.2rem);
+}
+
+header ul a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+main h1 {
+  font-weight: 700;
+  font-size: clamp(6rem, 1.3957rem + 7.1942vw, 8rem);
+  line-height: clamp(6rem, 1.3957rem + 7.1942vw, 8rem);
+  letter-spacing: -0.03em;
+  text-align: center;
+
+  margin-top: 4rem;
+
+
+}
+
+main h1 span {
+  color: #000;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+main img {
+  width: 100%;
+  max-width: 79.8rem;
+
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.button {
+  color: var(--text-color);
+  background-color: transparent;
+
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  padding: 1rem 3rem;
+  border: 1px solid var(--button);
+  border-radius: 0.6rem;
+  cursor: pointer;
+}

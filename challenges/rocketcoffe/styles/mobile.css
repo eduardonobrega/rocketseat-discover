@@ -1,0 +1,172 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  --background: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --text-menu-mobile: #a8a8b3;
+  --hover-color-menu-mobile: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: #000;
+
+  background: var(--background) url('../assets/blur-mobile.png') no-repeat;
+  background-size: cover;
+  background-position: 25% 30vh;
+
+}
+
+header  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  height: 15vh;
+
+  border-bottom: 1px solid var(--border);
+}
+
+header img {
+  max-width: 171px;
+}
+
+header >  button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  height: 85vh;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: flex;
+  height: 5.7rem;
+  align-items: center;
+  padding-left: 3rem;
+
+  border-bottom: 1px solid var(--border);
+  border-left: 5px solid transparent;
+}
+
+nav ul li a {
+  color: var(--text-menu-mobile);
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  border-left-color: var(--button);
+}
+
+nav ul li:hover a {
+  font-weight: 700;
+  color: var(--hover-color-menu-mobile);
+}
+
+main {
+  text-align: center;
+  height: 100%;
+}
+
+main p {
+  font-size: 3rem;
+  line-height: 4rem;
+
+  margin: 6rem auto;
+
+  max-width: 15ch;
+}
+
+main h1 {
+  font-weight: 700;
+  font-size: clamp(4rem, 2rem + 6.25vw, 6rem);
+  line-height: clamp(4rem, 2rem + 6.25vw, 6rem);
+  letter-spacing: -0.03em;
+
+  padding-bottom: 40vh;
+}
+
+main h1 span {
+  color: #000;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+main > img {
+  width: 100%;
+  max-width: 428px;
+  margin-top: 2.5rem;
+  position: absolute;
+  bottom: 0;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button {
+  color: var(--text-color);
+  background-color: transparent;
+
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  padding: 1rem 3rem;
+  margin: 0 auto;
+  border: 1px solid var(--button);
+  border-radius: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  cursor: pointer;
+}
+
+main .button {
+  margin-bottom: 6rem;
+}
+
+.hide-nav {
+  display: none;
+}
