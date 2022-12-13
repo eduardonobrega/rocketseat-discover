@@ -18,7 +18,13 @@ input.addEventListener('change', getUserData);
 async function getUserData() {
   try {
     const url = `https://api.github.com/users/${input.value}`;
-    const user = await fetch(url).then((res) => res.json())
+    const user = await fetch(url).then((res) => res.json());
+
+    if (user.message == 'Not Found') {
+      input.focus();
+      input.value = '';
+      throw alert('Usuário não encontrado');
+    }
 
     const {
       login,
@@ -39,7 +45,7 @@ async function getUserData() {
     spans[3].textContent = company ? `${company}` : 'Não tem';
     spans[4].textContent = `${location}`;
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -51,3 +57,5 @@ function randomHexColor() {
       .padStart(6, '0')
   );
 }
+
+
