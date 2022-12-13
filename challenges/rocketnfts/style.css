@@ -187,7 +187,7 @@ main > article:first-child p > span {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1110px) {
   .hide {
     display: block;
   }
