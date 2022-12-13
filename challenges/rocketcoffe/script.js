@@ -9,15 +9,18 @@ function openAndClosedMenu() {
 
   if (navOpen) {
     img.src = './assets/menu-buguer-close.svg';
+    document.body.style.overflow = 'hidden'
   } else {
     img.src = './assets/menu-buguer-open.svg';
+    document.body.style.overflow = 'initial'
+
   }
 }
 
 window.addEventListener('resize', styleChange);
 
 window.onload = () => {
-  const width = window.screen.width;
+  const width = window.innerWidth;
   const tagCss = document.querySelector('head link[rel="stylesheet"]');
 
   width >= 640
@@ -96,7 +99,7 @@ window.onload = () => {
 };
 
 function styleChange(e) {
-  let width = window.screen.width;
+  let width = window.innerWidth;
 
   const tagCss = document.querySelector('head link[rel="stylesheet"]');
 

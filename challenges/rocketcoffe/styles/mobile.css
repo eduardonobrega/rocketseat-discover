@@ -1,11 +1,5 @@
 :root {
   font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 
   --background: #000;
   --text-color: #fff;
@@ -13,6 +7,14 @@
   --border: #29292e;
   --text-menu-mobile: #a8a8b3;
   --hover-color-menu-mobile: #e1e1e6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+
 }
 
 * {
@@ -73,6 +75,7 @@ header >  button {
 
 nav {
   height: 85vh;
+  position: sticky;
 }
 
 nav ul {

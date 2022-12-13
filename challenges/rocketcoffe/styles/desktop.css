@@ -1,11 +1,5 @@
 :root {
   font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 
   --background: #000;
   --text-color: #fff;
@@ -13,6 +7,12 @@
   --border: #29292e;
   --text-menu-mobile: #a8a8b3;
   --hover-color-menu-mobile: #e1e1e6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -48,7 +48,6 @@ body {
   background-image: url('../assets/blur-1.png'), url('../assets/blur-2.png');
   background-repeat: no-repeat no-repeat;
   background-position: left bottom, right top;
-
 }
 
 header {
@@ -71,7 +70,6 @@ header ul {
 header ul a {
   text-decoration: none;
   color: #fff;
-
 }
 
 main h1 {
@@ -82,8 +80,6 @@ main h1 {
   text-align: center;
 
   margin-top: 4rem;
-
-
 }
 
 main h1 span {
@@ -93,15 +89,15 @@ main h1 span {
 }
 
 main img {
-  width: 100%;
+  width: 40vw;
   max-width: 79.8rem;
+  min-width: 400px;
 
   margin: 0 auto;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
 .button {
