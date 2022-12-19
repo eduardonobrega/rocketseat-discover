@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,18 +30,98 @@
 
     <main>
       <article>
-        <h1>Descubra a verdadeira arte digital e colecione diversas <span>NFTs</span></h1>
+        <h1>
+          Descubra a verdadeira arte digital e colecione diversas
+          <span>NFTs</span>
+        </h1>
         <div>
-          <p>Mercado digital para colecionáveis em criptos e tokens não fungível (NFT).
-            Compre, venda e descubra ativos digitais exclusivos para você.</p>
+          <p>
+            Mercado digital para colecionáveis em criptos e tokens não fungível
+            (NFT). Compre, venda e descubra ativos digitais exclusivos para
+            você.
+          </p>
 
-            <div class="group-avarts">
-              <img src="assets/group-avarts.png">
-              <p><span>+10</span>Artistas selecionados</p>
-            </div>
+          <div class="group-avarts">
+            <img src="assets/group-avarts.png" />
+            <p><span>+10</span>Artistas selecionados</p>
+          </div>
         </div>
-        <img src="assets/badge.svg" alt="" class="hide">
+        <img src="assets/badge.svg" alt="" class="hide" />
       </article>
+
+      <div class="slider">
+        <div class="slides">
+          <!-- Radios Buttons -->
+          <input type="radio" name="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <input type="radio" name="radio-btn" id="radio5" />
+          <input type="radio" name="radio-btn" id="radio6" />
+          <input type="radio" name="radio-btn" id="radio7" />
+          <input type="radio" name="radio-btn" id="radio8" />
+          <!-- Fim Radios Buttons -->
+
+          <!-- Slide images  -->
+          <div class="slide first">
+            <img src="assets/galeria-1.jpg" alt="1° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-2.jpg" alt="2° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-3.jpg" alt="3° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-4.jpg" alt="4° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-5.jpg" alt="5° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-6.jpg" alt="6° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-7.jpg" alt="7° Foto de uma astronauta" />
+          </div>
+
+          <div class="slide">
+            <img src="assets/galeria-8.jpg" alt="8° Foto de uma astronauta" />
+          </div>
+
+          <!-- Fim Slide images  -->
+
+          <!-- Navigation auto -->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+            <div class="auto-btn6"></div>
+            <div class="auto-btn7"></div>
+            <div class="auto-btn8"></div>
+          </div>
+
+        </div>
+
+        <div class="manual-navigation">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+          <label for="radio5" class="manual-btn"></label>
+          <label for="radio6" class="manual-btn"></label>
+          <label for="radio7" class="manual-btn"></label>
+          <label for="radio8" class="manual-btn"></label>
+        </div>
+      </div>
     </main>
   </body>
 </html>
