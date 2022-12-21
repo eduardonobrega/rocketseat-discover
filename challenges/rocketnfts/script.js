@@ -6,11 +6,18 @@ let interval = setInterval(() => {
   if (width < 1110) {
     nextImage();
   }
-}, 4000);
+}, 5000);
 
 window.addEventListener('resize', () => {
   width = window.innerWidth;
 });
+
+radios.forEach(radio => {
+  const id = radio.id.slice(-1)
+  radio.addEventListener('click', () => {
+    count = id
+  })
+})
 
 function nextImage() {
   radios[count].checked = true;
