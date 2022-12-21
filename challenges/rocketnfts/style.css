@@ -274,10 +274,8 @@ header button:hover {
   background-color: #fff;
 }
 
-
 .bg {
   background-color: var(--body-background);
-
 }
 
 .data {
@@ -299,13 +297,13 @@ header button:hover {
 
 .data-number div strong {
   font-weight: 600;
-  font-size: clamp(3rem, 1.0000rem + 6.2500vw, 5rem);
+  font-size: clamp(3rem, 1rem + 6.25vw, 5rem);
 }
 
 .data-number div small {
   color: var(--subtitle-color);
   font-weight: 600;
-  font-size: clamp(1.4rem, 0.8000rem + 1.8750vw, 2rem);
+  font-size: clamp(1.4rem, 0.8rem + 1.875vw, 2rem);
 }
 
 .data-text {
@@ -314,11 +312,11 @@ header button:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-size: clamp(1.2rem, 0.6rem + 1.875vw, 1.8rem);
 }
 
 .data-text p {
   font-weight: 400;
-  font-size: clamp(1.2rem, 0.6000rem + 1.8750vw, 1.8rem);
   max-width: 33ch;
 }
 
@@ -329,17 +327,14 @@ header button:hover {
 
 .data-text a {
   color: var(--text-color);
-  font-size: clamp(1.2rem, 0.6000rem + 1.8750vw, 1.8rem);
 
   display: inline-block;
-  margin-top: clamp(3rem, 0.0000rem + 9.3750vw, 6rem);
+  margin-top: clamp(3rem, 0rem + 9.375vw, 6rem);
 }
 
 .data img {
   margin-top: 4rem;
 }
-
-
 
 .hide {
   display: none;
@@ -384,10 +379,49 @@ header button:hover {
   .bgImg > article:first-of-type div img {
     width: clamp(10rem, -2.2667rem + 19.1667vw, 16.9rem);
   }
+
+  .data {
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid var(--subtitle-color);
+    
+  }
+
+  .data-number {
+    flex-direction: column;
+    min-width: clamp(10rem, -22.0000rem + 50.0000vw, 28rem);
+    border-right: 1px solid var(--subtitle-color);
+  }
+
+  .data-number div strong {
+    font-size: clamp(3rem, -0.5556rem + 5.5556vw, 5rem);
+  }
+
+  .data-number div small {
+    font-size: clamp(1.4rem, 0.3333rem + 1.6667vw, 2rem);
+  }
+
+  .data-text {
+    flex-direction: row;
+    width: 100%;
+    padding-top: clamp(4rem, -1.3333rem + 8.3333vw, 7rem);
+  }
+  
+  .data-text div {
+    width: 50%;
+    padding-left: clamp(0rem, -5.4400rem + 8.5000vw, 6.8rem);
+
+  }
+
+  .data-text {
+    font-size: clamp(1.2rem, 0.1333rem + 1.6667vw, 1.8rem);
+  }
+
+  .data-img {
+    margin-top: 7rem;
+  }
 }
 
-@media (max-width: 664px) {
-}
 
 @media (min-width: 1110px) {
   .hide {
