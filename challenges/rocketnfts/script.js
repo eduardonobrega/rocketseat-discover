@@ -5,6 +5,9 @@ let width = window.innerWidth;
 let interval = setInterval(() => {
   if (width < 1110) {
     nextImage();
+  }else {
+    document.querySelector('div.first').style.margin = 0;
+    
   }
 }, 5000);
 

@@ -41,9 +41,7 @@ textarea {
 
 body {
   min-height: 100vh;
-  background: var(--body-background) url('assets/background.png') repeat-y
-    center;
-  background-size: cover;
+  
   color: var(--text-color);
 }
 
@@ -100,6 +98,11 @@ header button {
 header button:hover {
   filter: brightness(1.1);
   border-radius: 1.5rem;
+}
+
+.wrapper-bgImg {
+  background: var(--body-background) url('assets/background.png') no-repeat center;
+  background-size: cover;
 }
 
 .bgImg {
@@ -276,11 +279,14 @@ header button:hover {
 
 .bg {
   background-color: var(--body-background);
+  
 }
 
 .data {
   display: flex;
   flex-direction: column;
+  width: min(95%, 1277px);
+  margin: 0 auto;
 }
 
 .data-number {
@@ -336,9 +342,72 @@ header button:hover {
   margin-top: 4rem;
 }
 
+.ranking {
+  width: min(95%, 1277px);
+  margin: 0 auto;
+
+}
+
+.ranking h2 {
+  font-weight: 700;
+  font-size: clamp(2.4rem, -0.2000rem + 8.1250vw, 5rem);
+  margin: clamp(6rem, 1.7647rem + 13.2353vw, 15rem) 0;
+}
+
+.ranking h2 > span {
+  color: var(--color-logo);
+}
+
+.ranking-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ranking-card {
+  max-width: 35rem;
+
+}
+
+.ranking-card h3  {
+  font-weight: 500;
+  font-size: clamp(2rem, 1.0000rem + 3.1250vw, 3rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.ranking-card h3 > img {
+  width: clamp(2rem, 1.0000rem + 3.1250vw, 3rem);
+
+}
+
+.ranking-card div {
+  font-size: clamp(1.4rem, 0.8000rem + 1.8750vw, 2rem);
+  
+  display: flex;
+  justify-content: space-between;
+
+  margin: 2rem 0 1rem;
+}
+
+.ranking-card div > .name {
+  font-weight: 600;
+  color: var(--subtitle-color);
+}
+
+.ranking-card div > .nfts {
+  font-weight: 400;
+  color: var(--color-logo);
+}
+
 .hide {
   display: none;
 }
+
+
+
+/* media queries  */
 
 @media (min-width: 640px) {
   header {
@@ -384,7 +453,6 @@ header button:hover {
     flex-direction: row;
     justify-content: center;
     border-bottom: 1px solid var(--subtitle-color);
-    
   }
 
   .data-number {
@@ -419,6 +487,37 @@ header button:hover {
 
   .data-img {
     margin-top: 7rem;
+  }
+
+  .ranking-cards {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-areas: 
+    'c1 line c2'
+    'c3 line c4';
+    column-gap: 3rem;
+    row-gap: 5rem;
+  }
+
+  .ranking-card:nth-child(1) {
+    grid-area: c1;
+  }
+  .ranking-card:nth-child(2) {
+    justify-self: end;
+    grid-area: c2;
+  }
+  .ranking-card:nth-child(3) {
+    grid-area: c3;
+  }
+  .ranking-card:nth-child(4) {
+    justify-self: end;
+    grid-area: c4;
+  }
+  .ranking-cards div:nth-child(5) {
+    background-color: var(--subtitle-color);
+    height: 100%;
+    opacity: 0.2;
+    grid-area: line;
   }
 }
 
