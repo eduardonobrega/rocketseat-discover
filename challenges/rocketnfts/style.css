@@ -401,6 +401,86 @@ header button:hover {
   color: var(--color-logo);
 }
 
+.bg > section {
+  width: min(95%, 1277px);
+  margin: clamp(6rem, 1.7647rem + 13.2353vw, 15rem) auto 0;
+}
+
+.artist {
+  background-color: var(--card-color);
+  max-width: 35rem;
+  height: 15rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  cursor: pointer;
+
+  padding: 0 3rem;
+}
+
+.artist:hover {
+  background-color: var(--color-logo);
+}
+
+.artist:hover span:last-child {
+  color: #fff;
+}
+
+.bg section h2 {
+  font-weight: 700;
+  font-size: clamp(2.4rem, -0.2000rem + 8.1250vw, 5rem);
+  text-align: center;
+
+  margin-bottom: clamp(6rem, 3.1765rem + 8.8235vw, 12rem);
+}
+
+.bg section h2 span {
+  color: var(--color-logo);
+}
+
+.cards-artists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  gap: clamp(5rem, 2.6471rem + 7.3529vw, 10rem);
+}
+
+.artist div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.artist span {
+  font-size: clamp(1.4rem, 1.1176rem + 0.8824vw, 2rem);
+  font-weight: 500;
+}
+
+.artist span:last-child {
+  color: var(--color-logo);
+}
+
+.bg section a {
+  display: flex;
+  gap: 1rem;
+
+  font-weight: 400;
+  font-size: 2rem;
+  text-decoration: none;
+
+  width: fit-content;
+  margin: 5rem auto 0;
+  color: var(--text-color);
+
+  transition: opacity 300ms;
+}
+
+.bg section a:hover {
+  opacity: 0.8;
+}
+
 .hide {
   display: none;
 }
