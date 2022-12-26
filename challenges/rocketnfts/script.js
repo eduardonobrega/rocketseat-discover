@@ -1,6 +1,10 @@
 const radios = document.querySelectorAll('.slides input');
 let count = 1;
 let width = window.innerWidth;
+const password = 123;
+
+
+// essa função 
 
 let interval = setInterval(() => {
   if (width < 1110) {

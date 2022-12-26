@@ -41,11 +41,12 @@ textarea {
 
 body {
   min-height: 100vh;
-  
+
   color: var(--text-color);
+  background-color: var(--body-background);
 }
 
-header {
+.bgImg > header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +55,11 @@ header {
   padding-top: 2rem;
 }
 
-header > img {
+.logo {
   width: clamp(20rem, 18.1429rem + 5.8036vw, 26.5rem);
 }
 
-header ul {
+.bgImg > header ul {
   list-style: none;
 
   display: flex;
@@ -67,17 +68,17 @@ header ul {
   gap: 1rem;
 }
 
-header ul li a {
+.bgImg > header ul li a {
   color: var(--text-color);
   font-size: clamp(1.4rem, -1.4rem + 4vw, 1.8rem);
   text-decoration: none;
 }
 
-header ul li a:hover {
+.bgImg > header ul li a:hover {
   font-weight: 700;
 }
 
-header button {
+.bgImg > header button {
   font-weight: 700;
   font-size: 1.4rem;
 
@@ -95,13 +96,14 @@ header button {
   transition: filter, border-radius 300ms;
 }
 
-header button:hover {
+.bgImg > header button:hover {
   filter: brightness(1.1);
   border-radius: 1.5rem;
 }
 
 .wrapper-bgImg {
-  background: var(--body-background) url('assets/background.png') no-repeat center;
+  background: var(--body-background) url('assets/background.png') no-repeat
+    center;
   background-size: cover;
 }
 
@@ -279,7 +281,7 @@ header button:hover {
 
 .bg {
   background-color: var(--body-background);
-  
+  margin-bottom: clamp(6rem, 1.7647rem + 13.2353vw, 15rem);
 }
 
 .data {
@@ -345,12 +347,11 @@ header button:hover {
 .ranking {
   width: min(95%, 1277px);
   margin: 0 auto;
-
 }
 
 .ranking h2 {
   font-weight: 700;
-  font-size: clamp(2.4rem, -0.2000rem + 8.1250vw, 5rem);
+  font-size: clamp(2.4rem, -0.2rem + 8.125vw, 5rem);
   margin: clamp(6rem, 1.7647rem + 13.2353vw, 15rem) 0;
 }
 
@@ -367,24 +368,22 @@ header button:hover {
 
 .ranking-card {
   max-width: 35rem;
-
 }
 
-.ranking-card h3  {
+.ranking-card h3 {
   font-weight: 500;
-  font-size: clamp(2rem, 1.0000rem + 3.1250vw, 3rem);
+  font-size: clamp(2rem, 1rem + 3.125vw, 3rem);
   display: flex;
   justify-content: space-between;
 }
 
 .ranking-card h3 > img {
-  width: clamp(2rem, 1.0000rem + 3.1250vw, 3rem);
-
+  width: clamp(2rem, 1rem + 3.125vw, 3rem);
 }
 
 .ranking-card div {
-  font-size: clamp(1.4rem, 0.8000rem + 1.8750vw, 2rem);
-  
+  font-size: clamp(1.4rem, 0.8rem + 1.875vw, 2rem);
+
   display: flex;
   justify-content: space-between;
 
@@ -430,7 +429,7 @@ header button:hover {
 
 .bg section h2 {
   font-weight: 700;
-  font-size: clamp(2.4rem, -0.2000rem + 8.1250vw, 5rem);
+  font-size: clamp(2.4rem, -0.2rem + 8.125vw, 5rem);
   text-align: center;
 
   margin-bottom: clamp(6rem, 3.1765rem + 8.8235vw, 12rem);
@@ -481,31 +480,170 @@ header button:hover {
   opacity: 0.8;
 }
 
+.wrapper-footer {
+  background-color: var(--card-color);
+  
+}
+
+footer {
+  margin: 0 auto;
+  background-color: var(--card-color);
+
+}
+
+footer header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 0;
+  padding-left: 2.5vw;
+
+  width: min(95%, 1277px);
+  margin: 0 auto;
+
+}
+
+footer header img {
+  display: inline;
+}
+
+footer header a {
+  background-color: var(--color-logo);
+
+  width: clamp(4rem, 0rem + 12.5vw, 8rem);
+  height: clamp(4rem, 0rem + 12.5vw, 8rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div:first-of-type {
+}
+
+footer .newsletter {
+  margin-bottom: 6rem;
+  padding: 0 2.5vw;
+}
+
+footer .newsletter h2 {
+  font-weight: 500;
+  font-size: clamp(2rem, 1rem + 3.125vw, 3rem);
+  max-width: 16ch;
+  margin-bottom: 2rem;
+}
+
+footer .newsletter h2 span {
+  color: var(--color-logo);
+}
+
+footer .newsletter label {
+  display: flex;
+  gap: 0;
+  height: 6.6rem;
+  width: 100%;
+  max-width: 40rem;
+}
+
+footer .newsletter label input {
+  flex: 1;
+  border: none;
+  padding: 2rem;
+  background-color: var(--body-background);
+}
+footer .newsletter label button {
+  border: none;
+  cursor: pointer;
+  padding: 0 3vw;
+}
+
+footer nav {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+}
+
+
+footer nav ul {
+  color: var(--subtitle-color);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.2000rem + 1.2500vw, 2rem);
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+footer nav ul li:hover {
+  color: #fff;
+  font-weight: 700;
+}
+
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3rem;
+  margin-top: 6rem;
+
+  padding-bottom: 4rem;
+}
+
+footer .redes a {
+  font-size: clamp(1.6rem, 1.2000rem + 1.2500vw, 2rem);
+  color: var(--subtitle-color);
+  text-decoration: none;
+
+}
+
+footer .redes a:hover, 
+footer .redes ul li:hover {
+  filter: brightness(1.3);
+
+}
+
+footer .redes ul {
+  list-style: none;
+  
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+footer ul > li {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
 
-
-
 /* media queries  */
 
 @media (min-width: 640px) {
-  header {
+  .bgImg > header {
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
     padding-top: 5rem;
     margin-bottom: clamp(5rem, -2.1111rem + 11.1111vw, 9rem);
   }
-  header > img {
+  .logo {
     width: clamp(15rem, -5.4444rem + 31.9444vw, 26.5rem);
   }
-  header ul {
+  .bgImg > header ul {
     flex-direction: row;
     gap: clamp(1rem, -10.6667rem + 16.6667vw, 6rem);
   }
 
-  header button {
+  .bgImg > header button {
     width: clamp(18rem, 14.4444rem + 5.5556vw, 20rem);
     height: clamp(4rem, 2.2222rem + 2.7778vw, 5rem);
     gap: clamp(1rem, 0.1111rem + 1.3889vw, 1.5rem);
@@ -537,7 +675,7 @@ header button:hover {
 
   .data-number {
     flex-direction: column;
-    min-width: clamp(10rem, -22.0000rem + 50.0000vw, 28rem);
+    min-width: clamp(10rem, -22rem + 50vw, 28rem);
     border-right: 1px solid var(--subtitle-color);
   }
 
@@ -554,11 +692,10 @@ header button:hover {
     width: 100%;
     padding-top: clamp(4rem, -1.3333rem + 8.3333vw, 7rem);
   }
-  
+
   .data-text div {
     width: 50%;
-    padding-left: clamp(0rem, -5.4400rem + 8.5000vw, 6.8rem);
-
+    padding-left: clamp(0rem, -5.44rem + 8.5vw, 6.8rem);
   }
 
   .data-text {
@@ -572,9 +709,9 @@ header button:hover {
   .ranking-cards {
     display: grid;
     grid-template-columns: 1fr 1px 1fr;
-    grid-template-areas: 
-    'c1 line c2'
-    'c3 line c4';
+    grid-template-areas:
+      'c1 line c2'
+      'c3 line c4';
     column-gap: 3rem;
     row-gap: 5rem;
   }
@@ -599,8 +736,50 @@ header button:hover {
     opacity: 0.2;
     grid-area: line;
   }
+
+  
 }
 
+@media (min-width: 800px) {
+
+
+  footer > div:first-of-type {
+    display: flex;
+
+    padding-left: 2.5vw;
+    
+    
+    width: min(95%, 1277px);
+    margin: 0 auto;
+  }
+
+  hr {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: var(--subtitle-color);
+  }
+  footer > div:first-of-type .newsletter {
+    margin-bottom: 0;
+    padding: 5rem 5rem 5rem 0;
+  
+  }
+
+  footer > div:first-of-type nav{
+    border-left: 1px solid var(--subtitle-color);
+    align-items: center;
+
+    flex: 1;
+  }
+
+  footer > div:last-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5vw 4rem;
+    width: min(95%, 1277px);
+    margin-inline: auto;
+  }
+}
 
 @media (min-width: 1110px) {
   .hide {
