@@ -482,13 +482,11 @@ body {
 
 .wrapper-footer {
   background-color: var(--card-color);
-  
 }
 
 footer {
   margin: 0 auto;
   background-color: var(--card-color);
-
 }
 
 footer header {
@@ -499,7 +497,6 @@ footer header {
 
   width: min(95%, 1277px);
   margin: 0 auto;
-
 }
 
 footer header img {
@@ -515,9 +512,6 @@ footer header a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer div:first-of-type {
 }
 
 footer .newsletter {
@@ -567,17 +561,15 @@ footer nav {
   justify-items: center;
 }
 
-
 footer nav ul {
   color: var(--subtitle-color);
   font-weight: 400;
-  font-size: clamp(1.6rem, 1.2000rem + 1.2500vw, 2rem);
+  font-size: clamp(1.6rem, 1.2rem + 1.25vw, 2rem);
   list-style: none;
 
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
 }
 
 footer nav ul li:hover {
@@ -597,21 +589,19 @@ footer .redes {
 }
 
 footer .redes a {
-  font-size: clamp(1.6rem, 1.2000rem + 1.2500vw, 2rem);
+  font-size: clamp(1.6rem, 1.2rem + 1.25vw, 2rem);
   color: var(--subtitle-color);
   text-decoration: none;
-
 }
 
-footer .redes a:hover, 
+footer .redes a:hover,
 footer .redes ul li:hover {
   filter: brightness(1.3);
-
 }
 
 footer .redes ul {
   list-style: none;
-  
+
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -736,19 +726,14 @@ footer ul > li {
     opacity: 0.2;
     grid-area: line;
   }
-
-  
 }
 
 @media (min-width: 800px) {
-
-
   footer > div:first-of-type {
     display: flex;
 
     padding-left: 2.5vw;
-    
-    
+
     width: min(95%, 1277px);
     margin: 0 auto;
   }
@@ -762,10 +747,9 @@ footer ul > li {
   footer > div:first-of-type .newsletter {
     margin-bottom: 0;
     padding: 5rem 5rem 5rem 0;
-  
   }
 
-  footer > div:first-of-type nav{
+  footer > div:first-of-type nav {
     border-left: 1px solid var(--subtitle-color);
     align-items: center;
 
