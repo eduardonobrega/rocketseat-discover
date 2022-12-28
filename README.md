@@ -17,7 +17,7 @@ Todos os desafios que fiz do programa discover da RocketSeat.
 </div>
 
 ## Construído com
-- Marcação HTML5 semântica
+- Marcação com HTML5 semântico
 - Propriedades personalizadas de CSS
 - JavaScript
 - Consumo de API
